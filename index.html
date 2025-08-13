@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan Approval Predictor</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Loan Approval Predictor</h1>
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <label>Gender:</label>
+                <select name="gender" required>
+                    <option value="1">Male</option>
+                    <option value="0">Female</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Married:</label>
+                <select name="married" required>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+            
+            <!-- Add all other form fields similarly -->
+            
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
