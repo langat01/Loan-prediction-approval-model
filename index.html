@@ -6,8 +6,8 @@
 </head>
 <body>
     <div class="container">
-        <h1>Loan Approval Predictor</h1>
-        <form action="/predict" method="post">
+        <h1>Loan Approval Prediction</h1>
+        <form action="/predict" method="POST">
             <div class="form-group">
                 <label>Gender:</label>
                 <select name="gender" required>
@@ -24,9 +24,70 @@
                 </select>
             </div>
             
-            <!-- Add all other form fields similarly -->
+            <div class="form-group">
+                <label>Dependents:</label>
+                <select name="dependents" required>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3+</option>
+                </select>
+            </div>
             
-            <button type="submit">Predict</button>
+            <div class="form-group">
+                <label>Education:</label>
+                <select name="education" required>
+                    <option value="0">Graduate</option>
+                    <option value="1">Not Graduate</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Self Employed:</label>
+                <select name="self_employed" required>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Applicant Income:</label>
+                <input type="number" name="applicant_income" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Coapplicant Income:</label>
+                <input type="number" name="coapplicant_income" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Loan Amount:</label>
+                <input type="number" name="loan_amount" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Loan Term (months):</label>
+                <input type="number" name="loan_term" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Credit History:</label>
+                <select name="credit_history" required>
+                    <option value="1">Good</option>
+                    <option value="0">Bad</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Property Area:</label>
+                <select name="property_area" required>
+                    <option value="0">Rural</option>
+                    <option value="1">Semiurban</option>
+                    <option value="2">Urban</option>
+                </select>
+            </div>
+            
+            <button type="submit">Predict Loan Approval</button>
         </form>
     </div>
 </body>
