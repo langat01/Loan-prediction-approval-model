@@ -7,9 +7,20 @@
 <body>
     <div class="container">
         <h1>Prediction Result</h1>
-        <div class="result">
-            <p>Loan Status: <strong>{{ prediction }}</strong></p>
-            <a href="/">Try Another Prediction</a>
+        <div class="result-box {{ 'approved' if prediction == 'Approved' else 'rejected' }}">
+            <h2>Loan Status: {{ prediction }}</h2>
+            
+            <div class="details">
+                <h3>Input Details:</h3>
+                <ul>
+                    <li>Gender: {{ 'Male' if form_data.Gender == 1 else 'Female' }}</li>
+                    <li>Married: {{ 'Yes' if form_data.Married == 1 else 'No' }}</li>
+                    <li>Dependents: {{ form_data.Dependents }}</li>
+                    <!-- Add all other fields similarly -->
+                </ul>
+            </div>
+            
+            <a href="/" class="btn">Try Another Prediction</a>
         </div>
     </div>
 </body>
