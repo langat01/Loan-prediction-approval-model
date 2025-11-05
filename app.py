@@ -6,7 +6,7 @@ from sklearn.preprocessing import LabelEncoder
 
 app = Flask(__name__)
 
-# Load and preprocess data (only needed once)
+# Load and preprocess data
 def load_data():
     df = pd.read_csv('data/train.csv')
     
